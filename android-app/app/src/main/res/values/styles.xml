@@ -1,1 +1,24 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Базовая тема приложения -->
+    <style name="Theme.PervyiLokon" parent="Theme.Material3.DayNight">
+        <item name="colorPrimary">@color/pink_light</item>
+        <item name="colorPrimaryVariant">@color/pink_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/blue_light</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="android:windowBackground">@color/background_light</item>
+        <item name="android:statusBarColor">@color/pink_light</item>
+    </style>
 
+    <style name="Theme.PervyiLokon.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!-- Стиль для карточек -->
+    <style name="AppointmentCard" parent="Widget.Material3.CardView">
+        <item name="cardCornerRadius">16dp</item>
+        <item name="cardElevation">4dp</item>
+        <item name="cardBackgroundColor">@color/white</item>
+    </style>
+</resources>
