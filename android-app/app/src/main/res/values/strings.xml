@@ -1,1 +1,18 @@
 
+<resources>
+    <string name="app_name">Первый Локон</string>
+    <string name="menu_settings">Настройки</string>
+    <string name="summary_template">Всего: %d • Новые: %d • Подтвержденные: %d • Выполненные: %d</string>
+    <string name="status_loading">Загрузка...</string>
+    <string name="status_loaded">Загружено записей: %d</string>
+    <string name="status_error">Ошибка загрузки данных</string>
+    <string name="status_network_error">Ошибка сети: %s</string>
+    <string name="today">Сегодня</string>
+    <string name="yesterday">Вчера</string>
+    <string name="tomorrow">Завтра</string>
+    <string name="call">Позвонить</string>
+    <string name="complete">Готово</string>
+    <string name="details">Детали записи</string>
+    <string name="change_status">Изменить статус</string>
+    <string name="status_updated">Статус изменен на: %s</string>
+</resources>
