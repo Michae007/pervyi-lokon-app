@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Первый Локон ✂️ Детская парикмахерская в Ярцево</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">👶💇‍♀️</div>
+            <h1>Первый Локон</h1>
+            <p class="subtitle">Детская парикмахерская в Ярцево</p>
+            
+            <div class="contact-info">
+                <a href="https://vk.ru/olga_borshchac" class="contact-btn" target="_blank">
+                    <i class="fab fa-vk"></i> Группа ВКонтакте
+                </a>
+                <a href="https://wa.me/79507050964" class="contact-btn" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Написать в WhatsApp
+                </a>
+                <a href="tel:+79507050964" class="contact-btn">
+                    <i class="fas fa-phone"></i> +7 950 705 0964
+                </a>
+            </div>
+        </header>
+        
+        <div class="main-grid">
+            <div class="booking-card">
+                <h2 class="card-title">Запись на стрижку</h2>
+                
+                <div class="alert success" id="successAlert">
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <h3>Запись успешно создана! 🎉</h3>
+                        <p>Мы свяжемся с вами для подтверждения в течение 30 минут.</p>
+                    </div>
+                </div>
+                
+                <div class="alert error" id="errorAlert">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <div>
+                        <h3>Ошибка при создании записи</h3>
+                        <p id="errorMessage">Пожалуйста, попробуйте еще раз или позвоните нам.</p>
+                    </div>
+                </div>
+
+                <form id="appointmentForm" class="appointment-form">
+                    <div class="form-section">
+                        <h3><i class="fas fa-user"></i> Информация о ребенке</h3>
+                        <div class="form-group">
+                            <label for="clientName">Имя ребенка *</label>
+                            <input type="text" id="clientName" required placeholder="Как зовут вашего ребенка?">
+                        </div>
+                        <div class="form-group">
+                            <label for="childAge">Возраст ребенка *</label>
+                            <input type="number" id="childAge" required placeholder="3" min="0" max="16">
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3><i class="fas fa-phone"></i> Контактные данные</h3>
+                        <div class="form-group">
+                            <label for="phone">Телефон родителя *</label>
+                            <input type="tel" id="phone" required placeholder="+7 900 123 45 67">
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3><i class="fas fa-scissors"></i> Выбор услуги</h3>
+                        <div class="service-grid">
+                            <div class="service-card" data-service="Стрижка машинкой" data-price="500">
+                                <div class="service-icon">👦</div>
+                                <div class="service-info">
+                                    <h4>Стрижка машинкой</h4>
+                                    <p>Только насадками</p>
+                                    <div class="price">500 руб</div>
+                                </div>
+                            </div>
+                            <div class="service-card" data-service="Модельная для малышей" data-price="600">
+                                <div class="service-icon">🌟</div>
+                                <div class="service-info">
+                                    <h4>Модельная для малышей</h4>
+                                    <p>1-4 года</p>
+                                    <div class="price">600 руб</div>
+                                </div>
+                            </div>
+                            <div class="service-card" data-service="Для подростков" data-price="700">
+                                <div class="service-icon">🚀</div>
+                                <div class="service-info">
+                                    <h4>Для подростков</h4>
+                                    <p>5-10 лет</p>
+                                    <div class="price">700 руб</div>
+                                </div>
+                            </div>
+                            <div class="service-card" data-service="Стрижка ножницами для девочек" data-price="800">
+                                <div class="service-icon">💇</div>
+                                <div class="service-info">
+                                    <h4>Ножницами для девочек</h4>
+                                    <p>Сложные стрижки</p>
+                                    <div class="price">800 руб</div>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="hidden" id="service" required>
+                        <input type="hidden" id="price" required>
+                    </div>
+
+                    <div class="form-section">
+                        <h3><i class="fas fa-calendar"></i> Дата и время</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="date">Дата стрижки *</label>
+                                <input type="date" id="date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="time">Время *</label>
+                                <select id="time" required>
+                                    <option value="">Выберите время</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3><i class="fas fa-sticky-note"></i> Дополнительно</h3>
+                        <div class="form-group">
+                            <label for="notes">Особые пожелания</label>
+                            <textarea id="notes" rows="4" placeholder="Аллергии, особенности ребенка, любимые персонажи..."></textarea>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-btn" id="submitBtn">
+                        <span class="btn-text">🎉 Записаться на стрижку!</span>
+                        <div class="btn-loading" style="display: none;">
+                            <i class="fas fa-spinner fa-spin"></i>
+                            <span>Отправляем...</span>
+                        </div>
+                    </button>
+                </form>
+            </div>
+
+            <div class="sidebar">
+                <div class="info-card">
+                    <h3><i class="fas fa-clock"></i> График работы</h3>
+                    <div class="schedule">
+                        <div class="schedule-item">
+                            <span class="day">Понедельник - Среда</span>
+                            <span class="time">10:00 - 19:00</span>
+                        </div>
+                        <div class="schedule-item">
+                            <span class="day">Пятница</span>
+                            <span class="time">10:00 - 19:00</span>
+                        </div>
+                        <div class="schedule-item">
+                            <span class="day">Суббота</span>
+                            <span class="time">10:00 - 16:00</span>
+                        </div>
+                        <div class="schedule-item closed">
+                            <span class="day">Четверг, Воскресенье</span>
+                            <span class="time">Выходной</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <h3><i class="fas fa-map-marker-alt"></i> Адрес</h3>
+                    <p class="address">г. Ярцево, Смоленская область<br>просп. Металлургов, 21</p>
+                </div>
+
+                <div class="info-card">
+                    <h3><i class="fas fa-star"></i> Почему мы?</h3>
+                    <ul class="features-list" style="list-style: none; line-height: 2;">
+                        <li>🎪 Игровая зона и мультики</li>
+                        <li>🚗 Специальные детские кресла</li>
+                        <li>🎁 Подарок после стрижки</li>
+                        <li>👩‍👧‍👧 Опытные мастера с детьми</li>
+                        <li>🧼 Гипоаллергенные средства</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-logo">👶 Первый Локон 💇‍♀️</div>
+            <p>Детская парикмахерская с заботой о ваших малышах</p>
+            <p class="address">
+                <i class="fas fa-map-marker-alt"></i> г. Ярцево, просп. Металлургов, 21<br>
+                <i class="fas fa-phone"></i> +7 950 705 0964
+            </p>
+            <p>© 2024 Детская парикмахерская "Первый Локон". Все права защищены.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
