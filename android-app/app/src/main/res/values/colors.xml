@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FF9EB5</color>
+    <color name="colorPrimaryDark">#FF7A9B</color>
+    <color name="colorAccent">#8BC6EC</color>
+    
+    <!-- Брендовые цвета -->
+    <color name="pink_light">#FF9EB5</color>
+    <color name="pink_dark">#FF7A9B</color>
+    <color name="blue_light">#8BC6EC</color>
+    <color name="yellow_accent">#FFD166</color>
+    <color name="background_light">#FFF9FB</color>
+    <color name="text_primary">#2D3748</color>
+    <color name="text_secondary">#718096</color>
+    <color name="white">#FFFFFF</color>
+    
+    <!-- Статусы -->
+    <color name="status_new">#FFB74D</color>
+    <color name="status_confirmed">#4CAF50</color>
+    <color name="status_completed">#2196F3</color>
+    <color name="status_cancelled">#F44336</color>
+</resources>
