@@ -1,6 +1,8 @@
 // Конфигурация
 const CONFIG = {
-    SCRIPT_URL: 'ВАШ_URL_СКРИПТА', // Замените на ваш URL из Google Apps Script
+    SCRIPT_URL: 'https://script.google.com/macros/s/ВАШ_SCRIPT_ID/exec',
+    // ...
+};
     
     // График работы
     WORK_SCHEDULE: {
